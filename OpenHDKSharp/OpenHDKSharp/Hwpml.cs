@@ -19,8 +19,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-// TODO: parent = x as TParent를 value = x as TParent로 변경, as IHwpmlElement<TParent>로 검사
-
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -1401,10 +1399,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as BorderFillElement) != null)
-                    return;
-                if ((this.parent = value as DrawingObjectElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as BorderFillElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as DrawingObjectElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -1648,10 +1647,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as ImageBrushElement) != null)
-                    return;
-                if ((this.parent = value as PictureElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as ImageBrushElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as PictureElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -2268,12 +2268,13 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = null; return; }
-                if ((this.parent = value as CharShapeElement) != null)
-                    return;
-                if ((this.parent = value as DrawingObjectElement) != null)
-                    return;
-                if ((this.parent = value as TextArtShapeElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as CharShapeElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as DrawingObjectElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as TextArtShapeElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -2558,10 +2559,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as NumberingElement) != null)
-                    return;
-                if ((this.parent = value as BulletElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as NumberingElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as BulletElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -3505,10 +3507,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as SectionElement) != null)
-                    return;
-                if ((this.parent = value as ParaListElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as SectionElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ParaListElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -4208,16 +4211,17 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as SecDefElement) != null)
-                    return;
-                if ((this.parent = value as ItemElement) != null)
-                    return;
-                if ((this.parent = value as ColDefElement) != null)
-                    return;
-                if ((this.parent = value as ShapeComponentElement) != null)
-                    return;
-                if ((this.parent = value as FormObjectElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as SecDefElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ItemElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ColDefElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ShapeComponentElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as FormObjectElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -4322,10 +4326,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as ParameterSetElement) != null)
-                    return;
-                if ((this.parent = value as ParameterArrayElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as ParameterSetElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ParameterArrayElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -4741,14 +4746,15 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as FootnoteShapeElement) != null)
-                    return;
-                if ((this.parent = value as EndnoteShapeElement) != null)
-                    return;
-                if ((this.parent = value as AutoNumElement) != null)
-                    return;
-                if ((this.parent = value as NewNumElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as FootnoteShapeElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as EndnoteShapeElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as AutoNumElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as NewNumElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -4835,10 +4841,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as FootnoteShapeElement) != null)
-                    return;
-                if ((this.parent = value as EndnoteShapeElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as FootnoteShapeElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as EndnoteShapeElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -4968,10 +4975,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as FootnoteShapeElement) != null)
-                    return;
-                if ((this.parent = value as EndnoteShapeElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as FootnoteShapeElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as EndnoteShapeElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -5041,10 +5049,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as FootnoteShapeElement) != null)
-                    return;
-                if ((this.parent = value as EndnoteShapeElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as FootnoteShapeElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as EndnoteShapeElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -5105,10 +5114,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as FootnoteShapeElement) != null)
-                    return;
-                if ((this.parent = value as EndnoteShapeElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as FootnoteShapeElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as EndnoteShapeElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -5367,26 +5377,27 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as MasterPageElement) != null)
-                    return;
-                if ((this.parent = value as ExtMasterPageElement) != null)
-                    return;
-                if ((this.parent = value as CellElement) != null)
-                    return;
-                if ((this.parent = value as DrawTextElement) != null)
-                    return;
-                if ((this.parent = value as CaptionElement) != null)
-                    return;
-                if ((this.parent = value as HeaderElement) != null)
-                    return;
-                if ((this.parent = value as FooterElement) != null)
-                    return;
-                if ((this.parent = value as FootnoteElement) != null)
-                    return;
-                if ((this.parent = value as EndnoteElement) != null)
-                    return;
-                if ((this.parent = value as HiddenCommentElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as MasterPageElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ExtMasterPageElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as CellElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as DrawTextElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as CaptionElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as HeaderElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as FooterElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as FootnoteElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as EndnoteElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as HiddenCommentElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -5833,42 +5844,43 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as TableElement) != null)
-                    return;
-                if ((this.parent = value as PictureElement) != null)
-                    return;
-                if ((this.parent = value as LineElement) != null)
-                    return;
-                if ((this.parent = value as RectangleElement) != null)
-                    return;
-                if ((this.parent = value as EllipseElement) != null)
-                    return;
-                if ((this.parent = value as ArcElement) != null)
-                    return;
-                if ((this.parent = value as PolygonElement) != null)
-                    return;
-                if ((this.parent = value as OleElement) != null)
-                    return;
-                if ((this.parent = value as EquationElement) != null)
-                    return;
-                if ((this.parent = value as UnknownObjectElement) != null)
-                    return;
-                if ((this.parent = value as ButtonElement) != null)
-                    return;
-                if ((this.parent = value as RadioButtonElement) != null)
-                    return;
-                if ((this.parent = value as CheckButtonElement) != null)
-                    return;
-                if ((this.parent = value as EditElement) != null)
-                    return;
-                if ((this.parent = value as ListBoxElement) != null)
-                    return;
-                if ((this.parent = value as ScrollBarElement) != null)
-                    return;
-                if ((this.parent = value as ContainerElement) != null)
-                    return;
-                if ((this.parent = value as ConnectLineElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as TableElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as PictureElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as LineElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as RectangleElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as EllipseElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ArcElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as PolygonElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as OleElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as EquationElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as UnknownObjectElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ButtonElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as RadioButtonElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as CheckButtonElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as EditElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ListBoxElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ScrollBarElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ContainerElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ConnectLineElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -6333,10 +6345,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = null; return; }
-                if ((this.parent = value as TableElement) != null)
-                    return;
-                if ((this.parent = value as PictureElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as TableElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as PictureElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -6627,10 +6640,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as TextElement) != null)
-                    return;
-                if ((this.parent = value as ContainerElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as TextElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ContainerElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -6695,14 +6709,15 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = null; return; }
-                if ((this.parent = value as PictureElement) != null)
-                    return;
-                if ((this.parent = value as DrawingObjectElement) != null)
-                    return;
-                if ((this.parent = value as ContainerElement) != null)
-                    return;
-                if ((this.parent = value as OleElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as PictureElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as DrawingObjectElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ContainerElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as OleElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -7037,12 +7052,13 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as PictureElement) != null)
-                    return;
-                if ((this.parent = value as DrawingObjectElement) != null)
-                    return;
-                if ((this.parent = value as OleElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as PictureElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as DrawingObjectElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as OleElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -7443,10 +7459,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = null; return; }
-                if ((this.parent = value as ShadowEffectElement) != null)
-                    return;
-                if ((this.parent = value as GlowElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as ShadowEffectElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as GlowElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -7559,22 +7576,23 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as LineElement) != null)
-                    return;
-                if ((this.parent = value as RectangleElement) != null)
-                    return;
-                if ((this.parent = value as EllipseElement) != null)
-                    return;
-                if ((this.parent = value as ArcElement) != null)
-                    return;
-                if ((this.parent = value as PolygonElement) != null)
-                    return;
-                if ((this.parent = value as CurveElement) != null)
-                    return;
-                if ((this.parent = value as ConnectLineElement) != null)
-                    return;
-                if ((this.parent = value as UnknownObjectElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as LineElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as RectangleElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as EllipseElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ArcElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as PolygonElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as CurveElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ConnectLineElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as UnknownObjectElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -7781,10 +7799,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as TextElement) != null)
-                    return;
-                if ((this.parent = value as ContainerElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as TextElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ContainerElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -7859,10 +7878,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as TextElement) != null)
-                    return;
-                if ((this.parent = value as ContainerElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as TextElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ContainerElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -7966,10 +7986,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as TextElement) != null)
-                    return;
-                if ((this.parent = value as ContainerElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as TextElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ContainerElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -8102,10 +8123,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as TextElement) != null)
-                    return;
-                if ((this.parent = value as ContainerElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as TextElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ContainerElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -8188,10 +8210,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as TextElement) != null)
-                    return;
-                if ((this.parent = value as ContainerElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as TextElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ContainerElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -8248,10 +8271,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as PolygonElement) != null)
-                    return;
-                if ((this.parent = value as OutlineDataElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as PolygonElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as OutlineDataElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -8309,10 +8333,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as TextElement) != null)
-                    return;
-                if ((this.parent = value as ContainerElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as TextElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ContainerElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -8427,10 +8452,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as TextElement) != null)
-                    return;
-                if ((this.parent = value as ContainerElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as TextElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ContainerElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -8579,20 +8605,21 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as ButtonElement) != null)
-                    return;
-                if ((this.parent = value as RadioButtonElement) != null)
-                    return;
-                if ((this.parent = value as CheckButtonElement) != null)
-                    return;
-                if ((this.parent = value as ComboBoxElement) != null)
-                    return;
-                if ((this.parent = value as EditElement) != null)
-                    return;
-                if ((this.parent = value as ListBoxElement) != null)
-                    return;
-                if ((this.parent = value as ScrollBarElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as ButtonElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as RadioButtonElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as CheckButtonElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ComboBoxElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as EditElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ListBoxElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ScrollBarElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -9098,10 +9125,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as TextElement) != null)
-                    return;
-                if ((this.parent = value as ContainerElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as TextElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ContainerElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
@@ -9212,10 +9240,11 @@ namespace OpenHDKSharp.Markup
             set
             {
                 if (value == null) { this.parent = value; return; }
-                if ((this.parent = value as TextElement) != null)
-                    return;
-                if ((this.parent = value as ContainerElement) != null)
-                    return;
+                IHwpmlElement temp = null;
+                if ((temp = value as TextElement) != null)
+                { this.parent = temp; return; }
+                if ((temp = value as ContainerElement) != null)
+                { this.parent = temp; return; }
                 throw new InvalidCastException();
             }
         }
