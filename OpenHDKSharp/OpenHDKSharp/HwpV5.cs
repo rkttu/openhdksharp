@@ -28,6 +28,8 @@ namespace OpenHDKSharp.V5
 {
     public static class HwpV5BinaryReaderExtension
     {
+        public static void TestStub() { }
+
         public static ushort ReadWord(this BinaryReader reader)
         { return reader.ReadUInt16(); }
 
