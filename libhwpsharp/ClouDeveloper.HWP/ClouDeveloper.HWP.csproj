@@ -43,7 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CharacterSet.cs" />
+    <Compile Include="HwpError.cs" />
+    <Compile Include="HwpMappingsID.cs" />
+    <Compile Include="HwpParseState.cs" />
+    <Compile Include="HwpSelectionStyle.cs" />
+    <Compile Include="HwpTag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HwpCtrlID.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
